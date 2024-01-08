@@ -1,0 +1,61 @@
+.screen {
+    text-align: center;
+    position: absolute;
+
+    right: -200%;
+    left:-200%;
+    top:0;
+    bottom:0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-color: white;
+
+    border-radius: 40px;
+    width: 315px;
+    height: 670px;
+
+    max-width: 100%;
+    max-height: 100%;  
+    position: relative;
+
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main:first-child{
+    right:50px;
+    position: relative;
+}
+
+.main:nth-child(2){
+    left:50px;
+}
+
+/* 1000px */
+
+@media screen and (max-width: 600px) {
+    .screen {
+      animation: animate_push 2s ease-in-out forwards;
+    }
+}
+
+@keyframes animate_push {
+    from {
+        transition : none;
+    }
+    to {
+        left: -255px;
+    }
+}
+
+.play_bar-buttons > a:checked {
+    color: none;
+}
